@@ -1,0 +1,64 @@
+# 投资分析助手配置文件
+
+# 监控标的列表
+watchlist:
+  - name: 黄金
+    ticker: GC=F
+    alert_threshold: 0.03  # ±3%
+    weight: 0.4
+    description: "黄金期货主连"
+
+  - name: 原油
+    ticker: CL=F
+    alert_threshold: 0.05  # ±5%
+    weight: 0.2
+    description: "WTI原油期货"
+
+  - name: 标普500
+    ticker: ^GSPC
+    alert_threshold: 0.05  # ±5%
+    weight: 0.2
+    description: "S&P 500 指数"
+
+  - name: 沪深300
+    ticker: 000300.SS
+    alert_threshold: 0.05  # ±5%
+    weight: 0.2
+    description: "沪深300指数"
+
+  # 可添加更多标的
+  # - name: 茅台
+  #   ticker: 600519.SS
+  #   alert_threshold: 0.07
+  #   description: "贵州茅台"
+
+# 宏观经济指标配置
+macro:
+  indicators:
+    - name: 联邦基金利率
+      code: FEDFUNDS
+      country: US
+
+    - name: 10年期通胀预期
+      code: T10YIE
+      country: US
+
+    - name: 实际GDP
+      code: GDPC1
+      country: US
+
+    - name: 美元指数
+      code: DXY
+      country: US
+
+# 分析配置
+analysis:
+  default_lookback_days: 20  # 均线回溯期
+  news_count: 5               # 每资产分析的新闻数
+  master_views_count: 3       # 大师观点数量
+
+# 输出配置
+output:
+  reports_dir: data/reports
+  cache_dir: data
+  log_dir: data/logs

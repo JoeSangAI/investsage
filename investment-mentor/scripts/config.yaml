@@ -1,0 +1,80 @@
+# 投资教练配置
+
+# TTS 配置
+tts:
+  voice_id_male: "Chinese_gravelly_storyteller_vv2"    # 明远的声音（低沉、沙哑、讲故事感）
+  voice_id_female: "Chinese_crisp_podcaster_vv1"       # 雨晴的声音（清脆、播客风）
+  speed: 1.1                                           # 语速 1.1（稍快）
+
+# 课程配置
+lesson:
+  duration_minutes: 10           # 课程时长（分钟）
+  warmup_seconds: 5              # 开场等待（让用户准备好）
+  hot_topic_weight: 0.4          # 热点内容权重
+  user_need_weight: 0.3          # 用户需求权重
+  knowledge_weight: 0.3          # 知识体系权重
+
+# 学习配置
+learning:
+  default_level: "L1"           # 默认起点
+  new_lesson_interval: 1         # 几天一课
+  review_threshold: 3             # 忘记后几天复习
+
+# 知识体系
+curriculum:
+  topics:
+    - id: "L1-WHAT-IS-STOCK"
+      name: "什么是股票"
+      level: L1
+      prerequisite: []
+
+    - id: "L1-WHAT-IS-GOLD"
+      name: "什么是黄金"
+      level: L1
+      prerequisite: []
+
+    - id: "L1-WHAT-IS-BOND"
+      name: "什么是债券"
+      level: L1
+      prerequisite: []
+
+    - id: "L2-INTEREST-RATE"
+      name: "利率是什么"
+      level: L2
+      prerequisite: ["L1-WHAT-IS-BOND"]
+
+    - id: "L2-INFLATION"
+      name: "通胀是什么"
+      level: L2
+      prerequisite: ["L1-WHAT-IS-BOND"]
+
+    - id: "L2-DOLLAR"
+      name: "美元是什么"
+      level: L2
+      prerequisite: ["L1-WHAT-IS-GOLD"]
+
+    - id: "L2-REAL-RATE"
+      name: "实际利率"
+      level: L2
+      prerequisite: ["L2-INTEREST-RATE", "L2-INFLATION"]
+
+    - id: "L3-MARKET-CYCLE"
+      name: "市场周期"
+      level: L3
+      prerequisite: ["L2-REAL-RATE"]
+
+    - id: "L3-RISK-Parity"
+      name: "风险平价"
+      level: L3
+      prerequisite: ["L2-REAL-RATE"]
+
+# 飞书推送（可选）
+feishu:
+  enabled: false
+  webhook_url: ""
+  bot_name: "投资教练"
+
+# OpenClaw 集成
+openclaw:
+  enabled: true
+  push_to_feishu: true

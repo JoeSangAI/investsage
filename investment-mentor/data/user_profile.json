@@ -1,0 +1,41 @@
+{
+  "user_id": "Joe",
+  "level": "L1",
+  "current_topic": null,
+  "completed_lessons": [
+    "lesson_L1-WHAT-IS-GOLD",
+    "lesson_L2-REAL-RATE",
+    "lesson_L3-MARKET-CYCLE",
+    "lesson_L1-WHAT-IS-STOCK",
+    "lesson_L4-MOAT",
+    "lesson_L4-VALUATION",
+    "lesson_REAL-RATE",
+    "lesson_GOLD"
+  ],
+  "questions_asked": [
+    {
+      "question": "黄金为什么能避险",
+      "answer": null,
+      "date": "2026-03-23T17:34:30.197733"
+    },
+    {
+      "question": "黄金为什么能避险",
+      "answer": null,
+      "date": "2026-03-23T18:21:06.507792"
+    }
+  ],
+  "thinking_answers": [],
+  "concepts_mastered": [
+    "L1-WHAT-IS-GOLD",
+    "L2-REAL-RATE",
+    "L3-MARKET-CYCLE",
+    "L1-WHAT-IS-STOCK",
+    "L4-MOAT",
+    "L4-VALUATION",
+    "REAL-RATE",
+    "GOLD"
+  ],
+  "concepts_learning": [],
+  "last_active": "2026-03-23T18:36:28.354081",
+  "created_at": "2026-03-23T17:33:38.984200"
+}
